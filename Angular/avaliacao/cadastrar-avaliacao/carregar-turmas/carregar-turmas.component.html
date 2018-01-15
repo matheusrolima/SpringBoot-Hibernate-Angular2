@@ -1,0 +1,20 @@
+<form>   
+  <p-growl [(value)]="msgs"></p-growl> 
+  <div id ="divCenter" class="ui-g ui-fluid">
+      <h3 class="first">{{titulo}}</h3>
+
+      <p-dataTable  [value]="turmas.alunos" [paginator]="true" rows="10" [responsive]="true">
+          <p-column [style]="{'width':'200px'}" field="nome" header="Nome"></p-column>
+          <p-column [style]="{'width':'100px'}" field="cpf" header="CPF"></p-column>
+          <p-column [style]="{'width':'70px','text-align':'center'}" styleClass="col-button" header="Selecionar">
+            <ng-template let-aluno="rowData" pTemplate="body" let-ri="rowIndex">
+                <button  style="width:30px;" type="button" pButton (click)="selecionar(aluno.id, turmas.id)" class="ui-button" icon="fa fa-pencil"></button>
+            </ng-template>
+          </p-column>
+      </p-dataTable>
+
+      <button style="width:100px;display:inline;background-color:darkgoldenrod; top: 5px; left:85%;" pButton type="button" label="Voltar" (click)="Voltar()"></button>
+  
+  </div> 
+      
+</form>

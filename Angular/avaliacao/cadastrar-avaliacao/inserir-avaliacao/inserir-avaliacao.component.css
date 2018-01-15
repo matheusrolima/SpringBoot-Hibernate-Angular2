@@ -1,0 +1,46 @@
+div {
+    display: block;
+    float:center; 
+}
+
+#divCenter { 
+    background-color: #e2f7fd; 
+    width: 50%; 
+    padding:10px;
+    position: relative;
+    top: 42%;
+    left: 30%; 
+}
+
+.first
+{
+    color: rgb(85, 84, 84);
+    text-align: center;
+    font-family: cursive;
+    
+}
+
+#float-input{
+    width: 300px;
+}
+
+#enviar{
+    width: 100px;
+    left: 20px;
+    bottom: 10px;
+}
+
+#tituloDisciplina,#tituloAluno{
+    font-family: cursive;
+    color:rgb(85, 84, 84); 
+}
+.ui-float-label{
+    bottom: 10px;
+}
+
+.dadosAluno{
+    color: rgb(85, 84, 84);
+    font-size: 20px;
+    display: block;
+    font-family: cursive;
+}

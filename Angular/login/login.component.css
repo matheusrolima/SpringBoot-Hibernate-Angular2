@@ -1,0 +1,29 @@
+
+div {
+    display: block;
+    float:center; 
+}
+
+#divCenter { 
+    background-color: #95e8ff; 
+    width: 500px; 
+    height: 200px;
+    padding:10px;
+    position: relative;
+    text-align:center; 
+    top: 40%;
+    left: 30%; 
+}
+
+.first
+{
+    color: rgb(85, 84, 84);
+    font-family: cursive;
+    
+}
+
+
+
+
+
+

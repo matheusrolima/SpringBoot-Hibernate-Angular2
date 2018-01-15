@@ -1,0 +1,31 @@
+<form >
+    <p-growl [(value)]="msgs"></p-growl>
+    <div id ="divCenter" class="ui-g ui-fluid">
+        <h3 class="first">{{titulo}}</h3>
+       
+        <span class="ui-float-label">
+          <input id="float-input" type="text" size="30" pInputText [(ngModel)]="disciplina.nome" name="nome">       
+          <label for="float-input">Nome</label>
+        </span> 
+
+        <br/>
+        <span class="ui-float-label">
+            <input id="float-input" size="30" type="text" pInputText [(ngModel)]="disciplina.cargaHoraria" name="carga_horaria">       
+            <label for="float-input">Carga Horaria</label>
+        </span>  
+
+        <br/>
+        <span class="ui-float-label">
+            <input id="float-input"  size="30" type="text" pInputText [(ngModel)]="disciplina.codigo" name="codigo">       
+            <label for="float-input">Código</label>
+        </span> 
+
+        <br/>    
+     
+        <button style="width:200px;display:inline" pButton type="button" label="Salvar" (click)="CadastrarDisciplina()"></button>
+        <button style="width:100px;display:inline;background-color:darkgoldenrod" pButton type="button" label="Limpar" (click)="Limpar()"></button>
+        <button style="width:100px;display:inline;background-color:darkgoldenrod" pButton type="button" label="Voltar" (click)="Voltar()"></button>
+        <br/>    
+        
+    </div>
+  </form>

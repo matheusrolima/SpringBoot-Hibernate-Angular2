@@ -1,0 +1,14 @@
+<div class="content-section introduction"> 
+  <div> 
+        <span id="logo">ITSS Faculdade</span>
+  </div>
+</div>
+
+<div class="menu">
+  <p-tabMenu  [style]="{'width':'50%' }" *ngIf="mostrarMenu" [model]="items"></p-tabMenu>
+  <button style="display:inline;" *ngIf="mostrarMenu" style="left:85%" label="Sair" type="button" pButton (click)="sair()" class="ui-button" icon="fa fa-sign-out"></button>
+</div>    
+
+<div class="row">
+  <router-outlet></router-outlet>
+</div>

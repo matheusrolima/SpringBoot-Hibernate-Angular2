@@ -1,0 +1,22 @@
+.content-section.introduction {
+    background-image: linear-gradient(270deg,#2bc0ec,#1b81d7);
+    color: #fff;
+    text-align: center;
+}
+.content-section {
+    display: block;
+    border-bottom: 1px solid #dde3e6;
+    padding: 70px;
+    overflow: hidden;
+    background-color: #f5f7f8;
+}
+
+#logo
+{
+    font-size: 50px;
+    font-family:serif;
+}
+
+.login{
+    top: 50%;
+}

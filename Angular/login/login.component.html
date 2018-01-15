@@ -1,0 +1,16 @@
+<form>  
+    <p-growl [(value)]="msgs"></p-growl>    
+    <div id ="divCenter" class="ui-g ui-fluid">
+        <h3 class="first">Login</h3>
+        
+        <input type="text" style="width:300px;" pInputText [(ngModel)]="login.usuario" name="usuario" placeholder="Username"/>     
+        <br/><br/>
+        
+        <input pPassword type="password" style="width:300px;" pInputText [(ngModel)]="login.senha" name = "senha" placeholder="Password"/>
+        <br/><br/>
+                        
+        <button pButton style="width:100px; left:55px;" type="button" label="Entrar" (click)="onSubmit()"></button>
+        <button pButton style="width:80px; left:55px; background-color:darkgoldenrod" type="button" label="Limpar" (click)="limpar()"></button>
+    </div>
+</form>
+

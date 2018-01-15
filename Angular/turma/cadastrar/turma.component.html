@@ -1,0 +1,46 @@
+<form>   
+  <p-growl [(value)]="msgs"></p-growl> 
+  <div id ="divCenter" class="ui-g ui-fluid">
+      <h3 class="first">{{titulo}}</h3>
+
+     <br/>
+     
+     <p id="tituloDisciplina">Disciplinas:</p>
+     <p-dropdown placeholder="Selecione uma Disciplina" [style]="{'width':'300px','display':'block','bottom':'10px'}" [options]="disciplinas" name="disciplina" [(ngModel)]="turma.disciplina" ></p-dropdown>
+     
+     <p id="tituloAluno">Alunos:</p>
+     <p-dropdown placeholder="Selecione um Aluno" [style]="{'width':'300px','bottom':'10px'}" [options]="alunos" name="aluno" [(ngModel)]="aluno"></p-dropdown>
+
+     <button placeholder="Select a City" pButton id="enviar" type="button" (click)="adicionar()" label="Adicionar"></button>
+     <br/>
+
+     <div class="ui-g" style="width:250px;margin-bottom:20px">
+        <div class="ui-g-4"><p-radioButton  value="Matutino" label="Matutino" [(ngModel)]="turma.periodo" name="periodo"></p-radioButton></div>
+        <div class="ui-g-4"><p-radioButton  value="Vespertino" label="Vespertino" [(ngModel)]="turma.periodo" name="periodo"></p-radioButton></div>
+        <div class="ui-g-4"><p-radioButton  value="Noturno" label="Noturno" [(ngModel)]="turma.periodo" name="periodo"></p-radioButton></div>
+          
+      </div>
+
+     <span class="ui-float-label">
+        <input id="float-input" type="text" size="30" pInputText [(ngModel)]="turma.codigo" name="codigo">       
+        <label for="float-input">Código</label> 
+      </span>
+
+      <p-dataTable  [value]="turma.alunos" [paginator]="true" rows="10" [responsive]="true">
+          <p-column [style]="{'width':'200px'}" field="nome" header="Nome"></p-column>
+          <p-column [style]="{'width':'100px'}" field="cpf" header="CPF"></p-column>
+          <p-column [style]="{'width':'70px','text-align':'center'}" styleClass="col-button" header="Excluir">
+            <ng-template let-aluno="rowData" pTemplate="body" let-ri="rowIndex">
+                <button  style="width:30px;" type="button" pButton (click)="excluir(ri)" class="ui-button-danger" icon="fa fa-trash"></button>
+            </ng-template>
+          </p-column>
+      </p-dataTable>
+
+      <br/>    
+      <button style="width:200px;display:inline" pButton type="button" label="Salvar" (click)="CadastrarTurma()"></button>
+      <button style="width:100px;display:inline;background-color:darkgoldenrod" pButton type="button" label="Limpar" (click)="Limpar()"></button>
+      <button style="width:100px;display:inline;background-color:darkgoldenrod" pButton type="button" label="Voltar" (click)="Voltar()"></button>
+      <br/>    
+  </div>
+      
+</form>

@@ -1,0 +1,41 @@
+<form> 
+  <p-growl [(value)]="msgs"></p-growl>
+  <div id ="divCenter" class="ui-g ui-fluid">
+      <h3 class="first">{{titulo}}</h3>
+     
+      <span class="ui-float-label">
+        <input  id="float-input" type="text" size="30" pInputText [(ngModel)]="aluno.nome" name="nome">       
+        <label for="float-input">Nome</label>
+      </span>
+
+      <br/>
+      <span class="ui-float-label">
+          <p-inputMask  id="float-input" type="text"  mask="999.999.999-99" [(ngModel)]="aluno.cpf" name="cpf"></p-inputMask>       
+          <label for="float-input">CPF</label>
+      </span>
+
+      <br/>
+      <div class="ui-g" style="width:250px;margin-bottom:10px">
+        <div class="ui-g-5"><p-radioButton  value="M" label="Masculino" [(ngModel)]="aluno.sexo" name="sexo"></p-radioButton></div>
+        <div class="ui-g-4"><p-radioButton  value="F" label="Feminino" [(ngModel)]="aluno.sexo" name="sexo"></p-radioButton></div>
+          
+      </div>
+      <br/>
+      <span class="ui-float-label">
+          <p-inputMask  id="float-input" type="text" mask="99/99/9999" [(ngModel)]="aluno.dtNasc" name="dtNasc"></p-inputMask>
+          <label for="float-input">Data de Nascimento</label> 
+      </span>
+
+      <br/>
+      <span class="ui-float-label">
+          <input  id="float-input" type="text" size="30" pInputText [(ngModel)]="aluno.cidade" name="cidade">       
+          <label for="float-input">Cidade</label>
+      </span>  
+
+      <br/>    
+      <button style="width:200px;display:inline" pButton type="button" label="Salvar" (click)="CadastrarAluno()"></button>
+      <button style="width:100px;display:inline;background-color:darkgoldenrod" pButton type="button" label="Limpar" (click)="Limpar()"></button>
+      <button style="width:100px;display:inline;background-color:darkgoldenrod" pButton type="button" label="Voltar" (click)="Voltar()"></button>
+      <br/>    
+  </div>
+</form>

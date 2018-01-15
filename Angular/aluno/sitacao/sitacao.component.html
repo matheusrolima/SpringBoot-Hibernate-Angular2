@@ -1,0 +1,24 @@
+<form>   
+  <p-growl [(value)]="msgs"></p-growl> 
+  <div id ="divCenter" class="ui-g ui-fluid">
+      <h3 class="first">{{titulo}}</h3>
+      
+        <label id="resultado">{{resultado}}</label>
+        <br/>
+        <label class="dadosAluno">Nome: {{aluno.nome}}</label>
+        <label class="dadosAluno">CPF: {{aluno.cpf}}</label>
+        <label class="dadosAluno">Sexo: {{aluno.sexo}}</label>
+        <label class="dadosAluno">Data de Nascimento: {{aluno.dtNasc}}</label>
+        <label class="dadosAluno">Cidade: {{aluno.cidade}}</label>
+        <br/>
+        <br/>
+        
+        <label class="dadosAluno">Frequência: {{avaliacao.frequencia}}  |  Nota 1: {{avaliacao.nota1}}  |  Nota 2: {{avaliacao.nota2}}</label>
+        <br/>
+        <button style="width:100px;display:inline;background-color:darkgoldenrod;left:65%;" pButton type="button" label="Voltar" (click)="Voltar()"></button>
+
+
+        
+  </div> 
+      
+</form>
